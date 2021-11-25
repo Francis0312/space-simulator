@@ -27,17 +27,7 @@ def fill_matrix (matrix, side_len):
     for i in range (int(side_len)):
         for j in range (int(side_len)):
             slot_type = (str(np.random.choice(choices, 1, p=weights)[0])).strip()
-
-            if (slot_type == gb.STAR_STR):
-                matrix[i][j] = '*'
-            elif (slot_type == gb.PLANET_STR):
-                matrix[i][j] = 'x'
-            elif (slot_type == gb.BLACK_HOLE_STR):
-                matrix[i][j] = 'O'
-            elif (slot_type == gb.NOTHING_STR):
-                matrix[i][j] = '.'
-
-            
+            matrix[i][j] = slot_type   
     return matrix
 
 # Debugging function for the global array
